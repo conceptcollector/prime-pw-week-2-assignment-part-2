@@ -26,10 +26,10 @@ if (number >= 2) {
 
 
 // 1. WRITE YOUR DESCRIPTION HERE
-// 
-// 
-// 
-//
+// We create a variable and set it to Dane.
+// We then create a conditional to check and see if name equals Mary. (If so, it would log 'Hi, Mary!')
+// Since Dane does not equal Mary, the conditional will move to the else statement, so
+// 'How do you do?' is logged to the console.
 
 //CODE
 /*
@@ -45,10 +45,11 @@ if (name === 'Mary') {
 */
 
 // 2. WRITE YOUR DESCRIPTION HERE
-// 
-// 
-// 
-//
+// We declare a variable named super and also declare a variable named code. Code is initialized to 123.
+// We create an if statement to check if code is equal to 123. It is, so secret is set to super and code is doubled.
+// We set another if statement to check if code is greater than 250. 123 * 2 is 246, so this statement doesn't run.
+// (If it did, secret would be set to duper.)
+// 'super' is logged to the console.
 
 //CODE
 /*
@@ -70,10 +71,12 @@ console.log(secret)
 */
 
 // 3. WRITE YOUR DESCRIPTION HERE
-// 
-// 
-// 
-//
+// Three variables are created and initialized. isStudent is set to true, age is set to 34, and zip is set to 55407.
+// A complex conditional is set. As the program is run, it bypasses the first two statements.
+// In the first if statement, both conditions must be true. isStudent is true but zip is not greater than 8000.
+// In the second statement, even though it's an or conditional, the variables don't pass either condition.
+// The third statement is simpler and only requires isStudent to be true, so
+// the console logs 'Welcome to Prime!'
 
 //CODE
 /*
@@ -129,11 +132,14 @@ if (number >= 2) {
 // colorTwo is set to 'red', and mix is set to true. We check if mix is true 
 // -- it is, so we set colorOne and colorTwo to 'purple'
 
+// FIX - minor fix, but the description has colorOne set to blue and colorTwo set to red. In the code, they're reversed.
+// This wouldn't affect the results, but it is an incorrect detail.
 /*
 let colorOne = 'red';
 let colorTwo = 'blue';
 let mix = true;
 
+// FIX - only colorOne has been assigned to purple here. On the line below colorOne should be colorTwo = 'purple';.
 if (mix === true) {
   colorOne = 'purple';
 }
@@ -144,9 +150,12 @@ if (mix === true) {
 // -- they are so we console.log 'throw away the food!'
 
 /*
+// This code runs, but time is set as const. Should be let as time is always changing.
 let temp = 40;
 const time = 4;
 
+// Additionally, the if statement is set as or, so we could be throwing away food unnecessarily.
+// Should be &&.
 if (temp > 39 || time >= 4) {
   console.log('throw away the food!');
 }
@@ -160,6 +169,15 @@ if (temp > 39 || time >= 4) {
 let age = 21;
 const minAge = 21;
 
+// The log shows 'no entry' for a number of reasons. The description says we check if age is greater than or equal to minAge.
+// But what the code is actually doing is seeing if minAge is less than or equal to age and then denying entry.
+// So what's happening here is the bouncer is only letting in people under the age limit.
+// Code should be:
+// if(age >= minAge) {
+// console.log('enter');
+// } else {
+// console.log('no entry');
+// }
 if(minAge <= age) {
   console.log('no entry');
 } else {
